@@ -5,38 +5,38 @@ using UnityEngine;
 // This class is the model for units in battle. See BaseUnit for units data in general
 public class BattleUnit {
 
-    public int id;
+    public int battleid;
+
+    public BaseUnit baseUnit;
 
     // Stats
-    public int maxHealth; // Max HP
     public int health; // HP
-    public int maxStamina; // Max Stamina
     public int stamina; // Stamina
-    public int str; // Strength
-    public int def; // Defense
-    public int spd; // Speed
-    public int wll; // Willpower
-    public int res; // Resistance
-    public int mov; // Movements per turn
-    public int exp; // Experience
 
-    // Misc
-    public string name;
+    // Status effects
 
-    // Status
-    // Possible Actions
-    // Moveset
-    // Graphics
-    // Sounds
-    // Traits
+    // Positioning
+    public int x;
+    public int y;
+    public short direction;
 
+    public BattleMapTile tile;
+    public BattleMap map;
 
+    
+        
+    public static BattleUnit FromBaseUnit(BaseUnit baseUnit)
+    {
+        BattleUnit ret = new BattleUnit();
 
+        ret.baseUnit = baseUnit;
 
-    // TODO Make one from a base unit
-    //public static BattleUnit FromBaseUnit(BaseUnit base)
-    //{
-    //}
+        // BattleUnit specific stuff
+        ret.health = baseUnit.maxHealth;
+        ret.stamina = baseUnit.maxStamina;
+
+        return ret;
+    }
 
 
     public string Serialize()
