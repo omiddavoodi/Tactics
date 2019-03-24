@@ -2,15 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BattleSimulation : MonoBehaviour {
+public class BattleSimulation {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public int turn;
+
+    public string Serialize()
+    {
+        // ****** TODO IMPLEMENT LATER *********
+        return "Implement later";
+    }
+
+    public static BattleSimulation Deserialize(string state)
+    {
+        // ****** TODO IMPLEMENT LATER *********
+        return new BattleSimulation();
+    }
 }

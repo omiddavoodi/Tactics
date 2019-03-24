@@ -23,6 +23,13 @@ public class UnitActionEffect {
     public ActionEffectType type;
     public ActionEffectTarget targetType;
 
+    // Area
+    public int areaCenterX;
+    public int areaCenterY;
+    public int areaWidth;
+    public int areaHeight;
+    public bool[][] areaMask;
+
     // Amount Calculation
     public int fixedAmount = 0;
     public float targetMaxHealthRatio = 0.0f;
@@ -40,7 +47,7 @@ public class UnitActionEffect {
     public float flankingBonus = 0.0f;
     public float rearFlankingBonus = 0.0f;
 
-
+    // TODO Conditions
 
     public string Serialize()
     {

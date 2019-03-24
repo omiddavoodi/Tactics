@@ -4,7 +4,18 @@ using UnityEngine;
 
 public class BattleController {
 
-    private BattleMap map;
-    private 
-	
+    public readonly BattleMap map;
+    public readonly BattleSimulation simulation;
+
+    public List<BattleUnitController> unitControllers;
+
+	public List<BattleMapTile> GetPath(int startX, int startY, int endX, int endY)
+    {
+        List<BattleMapTile> path = new List<BattleMapTile>();
+
+
+
+
+        return path;
+    }
 }

@@ -13,14 +13,14 @@ public class BaseUnit {
 
 
     // Softcoded Stats
-    public UnitStat[] stats;
+    public Dictionary<int, UnitStat> stats;
 
     // Misc
     public string name;
 
     // Features
     // Possible Actions
-    public UnitAction[] actions;
+    public Dictionary<int, UnitAction> actions;
     
     // Graphics
     // Sounds

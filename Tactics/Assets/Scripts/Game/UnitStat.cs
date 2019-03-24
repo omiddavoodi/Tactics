@@ -8,6 +8,8 @@ public class UnitStat {
 
     public string name;
 
+    public int amount;
+
     public string Serialize()
     {
         // ****** TODO IMPLEMENT LATER *********

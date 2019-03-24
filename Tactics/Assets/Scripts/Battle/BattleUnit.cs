@@ -2,6 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Direction
+{
+    Up,
+    Right,
+    Down,
+    Left
+}
+
 // This class is the model for units in battle. See BaseUnit for units data in general
 public class BattleUnit {
 
@@ -18,7 +26,7 @@ public class BattleUnit {
     // Positioning
     public int x;
     public int y;
-    public short direction;
+    public Direction direction; // 0: up, 1: right, 2: down, 3:left
 
     public BattleMapTile tile;
     public BattleMap map;

@@ -18,16 +18,17 @@ public class UnitAction {
     public int minRange;
     public int maxRange;
 
+    public bool requiresTargets;
+
     // Area
     public ActionAreaType areaType;
-    public int areaCenterX;
-    public int areaCenterY;
-    public int areaWidth;
-    public int areaHeight;
-    public bool[][] areaMask;
 
     // Effects
     public UnitActionEffect[] effects;
+
+    // Costs
+    public int healthCost;
+    public int staminaCost;
 
     public string Serialize()
     {
