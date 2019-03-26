@@ -31,7 +31,10 @@ public class UnitActionEffect {
     public bool[][] areaMask;
 
     // Amount Calculation
+    // Base fixed amount
     public int fixedAmount = 0;
+
+    // This ratio is multiplied by the relevant stat and added to the damage
     public float targetMaxHealthRatio = 0.0f;
     public float targetCurrentHealthRatio = 0.0f;
     public float targetMaxStaminaRatio = 0.0f;
@@ -44,8 +47,11 @@ public class UnitActionEffect {
     public float selfCurrentStaminaRatio = 0.0f;
     public float selfMovementRatio = 0.0f;
     public List<KeyValuePair<int, float>> selfStatsRatio = new List<KeyValuePair<int, float>>();
-    public float flankingBonus = 0.0f;
-    public float rearFlankingBonus = 0.0f;
+
+    // These bonuses are applied in the end by multiplying them on the results after everything above is applied first
+    public float flankingBonus = 1.0f;
+    // Is compleetely separate from flanking. A unit is either flanking or rear-flanking another unit, not both at the same time
+    public float rearFlankingBonus = 1.0f;
 
     // TODO Conditions
 

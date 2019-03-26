@@ -16,6 +16,7 @@ public class BattleUnit {
     public int battleid;
 
     public BaseUnit baseUnit;
+    public BattleUnitController controller;
 
     // Stats
     public int health; // HP
@@ -30,6 +31,8 @@ public class BattleUnit {
 
     public BattleMapTile tile;
     public BattleMap map;
+
+    public bool isAlive;
 
     
         
