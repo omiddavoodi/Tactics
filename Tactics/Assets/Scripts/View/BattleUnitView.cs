@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BattleUnitView : MonoBehaviour {
 
-    public BattleUnitController unit;
+    public readonly BattleUnitController unit;
     public GameObject mesh;
 
 

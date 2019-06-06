@@ -5,6 +5,7 @@ using UnityEngine;
 public class BattleMapView : MonoBehaviour {
 
     public Terrain terrain;
+    public readonly BattleMap battleMap;
 
 	// Use this for initialization
 	void Start () {
@@ -46,7 +47,7 @@ public class BattleMapView : MonoBehaviour {
 	}
 	
 
-    public void SetupTerrain(BattleMap map)
+    public void SetupTerrain()
     {
 
     }

@@ -34,7 +34,8 @@ public class BattleUnit {
 
     public bool isAlive;
 
-    
+    public BattlePlayer player;
+
         
     public static BattleUnit FromBaseUnit(BaseUnit baseUnit)
     {

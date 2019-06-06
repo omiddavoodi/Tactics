@@ -90,6 +90,45 @@ public class BattleUnitController {
         return false;
     }
 
+
+    // Get what tiles are passable for this particular unit
+    // TODO: Handle tile height restrictions later
+    public bool[,] GetPassableTiles()
+    {
+        bool[,] ret = new bool[battleController.map.height, battleController.map.width];
+
+        for (int y = 0; y < battleController.map.height; y++)
+        {
+            for (int x = 0; x < battleController.map.width; x++)
+            {
+                if (!battleController.map.tiles[y][x].impassable)
+                {
+                    if (battleController.map.tiles[y][x].unit != null)
+                    {
+                        if (battleController.map.tiles[y][x].unit.player == unit.player)
+                        {
+                            ret[y, x] = true;
+                        } 
+                        else
+                        {
+                            ret[y, x] = false;
+                        }
+                    }
+                    else
+                    {
+                        ret[y, x] = true;
+                    }
+                }
+                else
+                {
+                    ret[y, x] = false;
+                }
+            }
+        }
+
+        return ret;
+    }
+
     // What happens when ordered to move to a new location
     public bool Move(int x, int y)
     {
@@ -103,7 +142,7 @@ public class BattleUnitController {
                     // Check if destination is empty
                     if (battleController.map.tiles[y][x].unit == null)
                     {
-                        List<BattleMapTile> path = battleController.GetPath(unit.x, unit.y, x, y);
+                        List<BattleMapTile> path = battleController.GetPath(unit.x, unit.y, x, y, GetPassableTiles());
                         // if there is a path and we are not already there
                         if (path.Count > 1)
                         {

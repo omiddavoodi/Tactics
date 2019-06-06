@@ -10,8 +10,8 @@ public class BattleView : MonoBehaviour {
     static private BattleView _instance = null;
     static public BattleView Instance { get { if (_instance == null) { _instance = new BattleView(); return _instance; } return _instance; } }
 
-    public BattleMapView battleMapView;
-    
+    public readonly BattleMapView battleMapView;
+    public readonly BattleController battleController;
 
 	// Use this for initialization
 	void Start () {
