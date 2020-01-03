@@ -26,6 +26,7 @@ public class BattleMap {
 
     public BattleMapTile[][] tiles;
 
+    public BattleMapCosmetic[] cosmetics;
 
     // ***** TODO Cosmetic stuff should go here 
 
