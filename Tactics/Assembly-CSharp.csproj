@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\Game\ProtoData\UnitStat.cs" />
     <Compile Include="Assets\Scripts\Utility\ExperimentEditor.cs" />
     <Compile Include="Assets\Scripts\Utility\ExperimentScript.cs" />
+    <Compile Include="Assets\Scripts\Utility\MeshObjects.cs" />
     <Compile Include="Assets\Scripts\Utility\UtilityFunctions.cs" />
     <Compile Include="Assets\Scripts\View\BattleMapView.cs" />
     <Compile Include="Assets\Scripts\View\BattleUnitView.cs" />
