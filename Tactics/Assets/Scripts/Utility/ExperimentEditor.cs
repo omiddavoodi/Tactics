@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-
+// For testing
 [CustomEditor(typeof(ExperimentScript))]
 public class ExperimentEditor : Editor
 {
